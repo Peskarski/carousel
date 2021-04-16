@@ -44,7 +44,7 @@ export const Img = styled.img`
     </tr>
   </table>
 
-Then data is used as the prop 'data' in the Carousel component.
+Data array is used as the prop 'data' in the Carousel component.
 
 ```js
 <Carousel data={data} size='400' />
