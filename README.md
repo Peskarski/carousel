@@ -1,4 +1,4 @@
-# carousel
+# Carousel
 
 This Carousel Component is made both for desktop and mobile devices and support any html content.
 
@@ -37,13 +37,14 @@ On mobile devices there are no buttons, you need to use slides to change the ele
 There are also scroll points at the bottom of the Carousel. You can go to any element by clicking
 on the appropriate point.
 
-Desktop view:
+## Desktop view:
 
-![]('./screenshots/desktop.png')
+![](screenshots/desktop.png)
 
-Mobile view:
 
-![]('./screenshots/mobile.png')
+## Mobile view:
+
+![](screenshots/mobile.png)
 
 
 
