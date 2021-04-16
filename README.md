@@ -35,7 +35,7 @@ export const Img = styled.img`
         <td>data</td>
         <td>Array of Carousel items</td>
         <td>Object</td>
-        <td>[]</td>
+        <td>[ ]</td>
         <td>yes</td>
     </tr>
     <tr>
