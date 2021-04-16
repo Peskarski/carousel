@@ -28,18 +28,21 @@ export const Img = styled.img`
         <th>Prop name</th>
         <th>Description</th>
         <th>Type</th>
+        <th>Default value</th>
         <th>Is required</th>
     </tr>
     <tr>
         <td>data</td>
         <td>Array of Carousel items</td>
         <td>Object</td>
+        <td>[]</td>
         <td>yes</td>
     </tr>
     <tr>
         <td>size</td>
         <td>Width and height of Carousel item</td>
         <td>String</td>
+        <td>400</td>
         <td>yes</td>
     </tr>
   </table>
