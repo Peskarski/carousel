@@ -45,7 +45,7 @@ const Carousel = ({ data, size }) => {
           swipeDelta={swipeDelta} length={data.length}>
           <section>
             {data.map((element, index) => (
-              <div key={index}>{element}</div>
+              <div key={Math.random() + index}>{element}</div>
             ))}
           </section>
         </CarouselItem>

@@ -14,7 +14,7 @@ export const CarouselItem = styled.div`
     min-width: ${props => `${props.size}px`};
     overflow-x: hidden;
 
-  @media screen and (max-width: 720px) {
+  @media (max-width: 720px) {
     min-width: 100%;
     height: ${height + 'px'};
   }
@@ -25,7 +25,7 @@ export const CarouselItem = styled.div`
     width: ${props => `${props.length * 100}%`};
     left: ${props => `${props.position * (-props.size)}px`};
 
-    @media screen and (max-width: 720px) {
+    @media (max-width: 720px) {
       left: ${props => `${props.swipeDelta === 0 ? props.position * (-height) :
       props.position * (-height) + (props.swipeDelta)}px`};
   }
@@ -54,7 +54,7 @@ export const Button = styled.button`
   background-color: white;
   cursor: pointer;
 
-  @media screen and (max-width: 720px) {
+  @media (max-width: 720px) {
       display: none;
   }
 `
