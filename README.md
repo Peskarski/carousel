@@ -22,6 +22,26 @@ export const Img = styled.img`
   height: auto;
 `
 ```
+## Props
+<table>
+    <tr>
+        <th>Prop name</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Is required</th>
+    </tr>
+    <tr>
+        <td>data</td>
+        <td>Array of Carousel items</td>
+        <td>Object</td>
+        <td>yes</td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>Width and height of Carousel item</td>
+        <td>String</td>
+        <td>yes</td>
+    </tr>
 
 Then data is used as the prop 'data' in the Carousel component.
 
