@@ -46,12 +46,12 @@ export const Img = styled.img`
 
 Data array is used as the prop 'data' in the Carousel component.
 
+There is also prop 'size' in the Carousel. This is the width and the height of the Carousel
+element in px. It applies only for desktop devices. For mobile, it's always 100% of screen width.
+
 ```js
 <Carousel data={data} size='400' />
 ```
-
-There is also prop 'size' in the Carousel. This is the width and the height of the Carousel
-element in px. It applies only for desktop devices. For mobile, it's always 100% of screen width.
 
 To go to the next and the previous elements on desktop devices there are corresponding buttons.
 On mobile devices there are no buttons, you need to use slides to change the element.
