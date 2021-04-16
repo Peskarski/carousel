@@ -14,7 +14,7 @@ const text = <p>Some text</p>
 const data = [pic1, text, pic2, pic3];
 ```
 
-You can stylize elements in 'styles.js' file.
+You can stylize elements in 'src/content/styles.js' file.
 
 ```js
 export const Img = styled.img`
