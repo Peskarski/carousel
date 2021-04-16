@@ -42,6 +42,7 @@ export const Img = styled.img`
         <td>String</td>
         <td>yes</td>
     </tr>
+  </table>
 
 Then data is used as the prop 'data' in the Carousel component.
 
