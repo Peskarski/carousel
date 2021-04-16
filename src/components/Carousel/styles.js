@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const height = screen.width -16;
+const height = screen.width - 16;
 
 export const Main = styled.div`
   width: 100%;
@@ -26,12 +26,13 @@ export const CarouselItem = styled.div`
     left: ${props => `${props.position * (-props.size)}px`};
 
     @media screen and (max-width: 720px) {
-      left: ${props => `${props.position * (-height)}px`};
+      left: ${props => `${props.swipeDelta === 0 ? props.position * (-height) :
+      props.position * (-height) + (props.swipeDelta)}px`};
   }
 
     height: 100%;
     position: relative;
-    transition: left 1s;
+    transition: ${props => props.swipeDelta === 0 && 'left 0.5s ease'};
 
     & div {
       width: 100%;
@@ -44,9 +45,9 @@ export const CarouselItem = styled.div`
 `
 
 export const Button = styled.button`
-  width: ${props => `${props.size/6}px`};
+  width: ${props => `${props.size / 6}px`};
   max-width: 50px;
-  height: ${props => `${props.size/6}px`};
+  height: ${props => `${props.size / 6}px`};
   max-height: 50px;
   margin: auto 10px;
   border: none;

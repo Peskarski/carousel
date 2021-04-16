@@ -6,6 +6,7 @@ import Circles from '../Circles/Circles'
 
 const Carousel = ({ data, size }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [swipeDelta, setSwipeDelta] = useState(0);
 
   const handlePrevClick = () => {
     currentIndex > 0 && setCurrentIndex(currentIndex - 1);
@@ -16,8 +17,18 @@ const Carousel = ({ data, size }) => {
   }
 
   const swipeHandlers = useSwipeable({
-    onSwipedRight: () => currentIndex > 0 && setCurrentIndex(currentIndex - 1),
-    onSwipedLeft: () => currentIndex < (data.length - 1) && setCurrentIndex(currentIndex + 1)
+    onSwipedRight: () => {
+      currentIndex > 0 && setCurrentIndex(currentIndex - 1);
+    },
+    onSwipedLeft: () => {
+      currentIndex < (data.length - 1) && setCurrentIndex(currentIndex + 1);
+    },
+    onSwiping: ({ deltaX }) => {
+      setSwipeDelta(deltaX);
+    },
+    onSwiped: () => {
+      setSwipeDelta(0);
+    }
   });
 
   const onCircleClick = (e) => {
@@ -30,7 +41,8 @@ const Carousel = ({ data, size }) => {
         <Button onClick={handlePrevClick} size={size}>
           {PrevButton}
         </Button>
-        <CarouselItem {...swipeHandlers} position={currentIndex} size={size} length={data.length}>
+        <CarouselItem {...swipeHandlers} position={currentIndex} size={size}
+          swipeDelta={swipeDelta} length={data.length}>
           <section>
             {data.map((element, index) => (
               <div key={index}>{element}</div>
@@ -41,7 +53,7 @@ const Carousel = ({ data, size }) => {
           {NextButton}
         </Button>
       </Main >
-      <Circles amount={data.length} activeCircle={currentIndex} handleCircleClick={onCircleClick}/>
+      <Circles amount={data.length} activeCircle={currentIndex} handleCircleClick={onCircleClick} />
     </>
   )
 }
